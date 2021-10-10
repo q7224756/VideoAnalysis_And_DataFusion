@@ -1255,7 +1255,7 @@ classdef VideoAnalysisToolkit_v3_7_exported < matlab.apps.AppBase
                         check2 = 0; % for TTC: the calculation will only do once (after the car i)
                         
                         if i == 1
-                            i = 1; % überspringt den Fall i = 1
+                            i = 1; % Ã¼berspringt den Fall i = 1
                         else
                             for j = i-1:-1:1 % consider the car before the current car i
                                 AAA = EntryTime(i):deltaT:ExitTime(i);
@@ -1269,7 +1269,7 @@ classdef VideoAnalysisToolkit_v3_7_exported < matlab.apps.AppBase
                                     Y_pj        = Y_position(j,ib);
                                     Speed_pj    = Speed_Array(j,ib);
                                     % TTC Calculation will only do once (the nearest car is of interest)
-                                    if (check1 == 0) && (strcmp(Maneuver{i},Maneuver{j}) == 1) && (max(abs(D(i,:)-D(j,:))) <= TTC_Sensitivity) % gleiche Manöver
+                                    if (check1 == 0) && (strcmp(Maneuver{i},Maneuver{j}) == 1) && (max(abs(D(i,:)-D(j,:))) <= TTC_Sensitivity) % gleiche ManÃ¶ver
                                         TTC_j       = zeros(4,length(ia));
                                         TTC_j(1,:)  = AAA(ia);
                                         Abstand = sqrt((X_pi-X_pj).^2 + (Y_pi-Y_pj).^2);
@@ -1332,7 +1332,7 @@ classdef VideoAnalysisToolkit_v3_7_exported < matlab.apps.AppBase
                                 Y_pj        = Y_position(j,ib);
                                 Speed_pj    = Speed_Array(j,ib);
                                 % TTC Calculation will only do once (the nearest car is of interest)
-                                if (check2 == 0) && (strcmp(Maneuver{i},Maneuver{j}) == 1) && (max(abs(D(i,:)-D(j,:))) <= TTC_Sensitivity) % gleiche Manöver
+                                if (check2 == 0) && (strcmp(Maneuver{i},Maneuver{j}) == 1) && (max(abs(D(i,:)-D(j,:))) <= TTC_Sensitivity) % gleiche ManÃ¶ver
                                     TTC_j       = zeros(4,length(ia));
                                     TTC_j(1,:)  = AAA(ia);
                                     Abstand = sqrt((X_pi-X_pj).^2 + (Y_pi-Y_pj).^2);
